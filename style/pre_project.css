@@ -71,6 +71,12 @@ body {
   text-decoration: none;
   color: red;
 }
+.nav-tab:hover {
+  background-color: #fff;
+  border-radius: 20px;   /* มนกว่าของเดิมเล็กน้อย */
+  transform: scale(1.02); /* ยกนิดๆ เวลา hover */
+  font-weight: 500;
+}
 
 /* Content */
 .content {
@@ -98,8 +104,8 @@ body {
 
 .top-row .card {
   flex: 1;
-  min-width: 280px; /* ให้กว้างขึ้น ไม่บีบ */
-  background: #fff;
+  min-width: 280px;
+  /*ให้กว้างขึ้นไม่บีบ*/background: #fff;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -107,6 +113,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .card {
   background: #ffffff;
@@ -142,7 +152,6 @@ body {
   padding-bottom: 10px; /* เผื่อระยะห่างจากเส้น */
   border-bottom: 1px solid #e5e5e5; /* เส้นคั่นสีเทาอ่อน */
 }
-
 .card-top p {
   margin: 0;
   font-size: 18px;
@@ -183,69 +192,6 @@ body {
   font-weight: bold;
   color: #444;
 }
-
-/* Grid of 4 */
-.grid-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* บังคับให้มี 2 คอลัมน์ */
-  gap: 20px;
-}
-
-.grid-box .card {
-  min-height: 200px;
-  padding: 20px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.grid-box h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #e5e5e5;
-  color: #222;
-}
-
-.grid-box p {
-  font-size: 14px;
-  color: #555;
-  margin: 8px 0;
-  flex-grow: 1; /* ข้อความจะขยายเต็มกลางการ์ด */
-}
-
-.grid-box .status-text {
-  font-weight: bold;
-  color: #d9534f; /* แดงอ่อนเตือน */
-}
-
-.grid-box .btn {
-  align-self: flex-start;
-  margin-top: auto;
-  font-weight: 300;
-}
-
-.btn {
-  padding: 8px 14px;
-  border: none;
-  background: #252525;
-  color: white;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-  align-self: flex-start;
-}
-.btn:hover {
-  background: #414141;
-  color: #fff;
-}
-
 /* Progress bar */
 .progress {
   width: 100%;
@@ -262,4 +208,9 @@ body {
 }
 .progress-bar.done {
   background: gray;
+}
+
+.card h2{
+    font-weight: 400;
+    padding: 25px;
 }

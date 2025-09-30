@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/std_homepage.css" />
     <script
       src="https://kit.fontawesome.com/a2be86925b.js"
@@ -26,7 +27,7 @@
       <div class="nav-role">
         <div class="nav-tab active">
           <i class="fa-solid fa-house"></i>
-          <span>หน้าแรก</span>
+          <a href="std_homepage.html"><span>หน้าแรก</span></a>
         </div>
         <div class="nav-tab">
           <i class="fa-solid fa-user"></i>
@@ -34,7 +35,7 @@
         </div>
         <div class="nav-tab logout">
           <i class="fa-solid fa-right-from-bracket"></i>
-          <span>ออกจากระบบ</span>
+          <a href="login.html"><span>ออกจากระบบ</span></a>
         </div>
       </div>
     </nav>
@@ -75,19 +76,23 @@
       <div class="grid-box">
         <div class="card">
           <h3>เสนอโครงงาน</h3>
-          <button class="btn">เสนอหัวข้อโครงงาน</button>
+          <p>เริ่มต้นโครงงานด้วยการเสนอโครงการใหม่ของคุณ</p>
+          <a href="pre_project.html"><button class="btn">เสนอหัวข้อโครงงาน</button></a>
         </div>
+
         <div class="card">
           <h3>ความคิดเห็นจากที่ปรึกษา</h3>
-          <p>-</p>
+          <p>ยังไม่มีความคิดเห็น</p>
         </div>
+
         <div class="card">
           <h3>ติดตามผลสอบหัวข้อ</h3>
           <p>-</p>
         </div>
+
         <div class="card">
           <h3>ยื่นสอบจบ</h3>
-          <p>ไม่มามารถยื่นสอบได้</p>
+          <p class="status-text">ไม่สามารถยื่นสอบได้</p>
         </div>
       </div>
     </main>
