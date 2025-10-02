@@ -1,113 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style/std_homepage.css" />
-    <script
-      src="https://kit.fontawesome.com/a2be86925b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
+    <script src="https://kit.fontawesome.com/a2be86925b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
     <!-- Header -->
     <header class="header">
-      <h1>ระบบจัดการโครงงาน</h1>
-      <h2>นักศึกษา</h2>
+        <h1>ระบบจัดการโครงงาน</h1>
+        <h2>นักศึกษา</h2>
     </header>
 
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-role">
-        <div class="nav-tab active">
-          <i class="fa-solid fa-house"></i>
-          <a href="std_homepage.html"><span>หน้าแรก</span></a>
+        <div class="nav-role">
+            <div class="nav-tab active">
+                <i class="fa-solid fa-house"></i>
+                <a href="std_homepage.html"><span>หน้าแรก</span></a>
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-user"></i>
+                <span>ข้อมูลผู้ใช้</span>
+            </div>
+            <div class="nav-tab logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="login.html"><span>ออกจากระบบ</span></a>
+            </div>
         </div>
-        <div class="nav-tab">
-          <i class="fa-solid fa-user"></i>
-          <span>ข้อมูลผู้ใช้</span>
-        </div>
-        <div class="nav-tab logout">
-          <i class="fa-solid fa-right-from-bracket"></i>
-          <a href="login.html"><span>ออกจากระบบ</span></a>
-        </div>
-      </div>
     </nav>
 
     <!-- Content -->
     <main class="content">
-      <!-- Top row -->
-      <div class="top-row">
-        <div class="card">
-          <div class="card-top">
-            <p>สถานะโครงงาน</p>
-            <i class="fa-solid fa-check check-icon"></i>
-          </div>
-          <span class="status">รอยื่นสอบจบ</span>
+        <!-- Top row -->
+        <div class="top-row">
+            <div class="card">
+                <div class="card-top">
+                    <p>สถานะโครงงาน</p>
+                    <i class="fa-solid fa-check check-icon"></i>
+                </div>
+                <span class="status">รอยื่นสอบจบ</span>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <p>ความก้าวหน้าของโครงงาน</p>
+                    <i class="fa-solid fa-clock clock-icon"></i>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%;background-color: #0faa55f1;"></div>
+                </div>
+                <small>100%</small>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <p>อัปเดตโครงงานล่าสุด</p>
+                    <i class="fa-solid fa-calendar-days cal-icon"></i>
+                </div>
+                <span class="date">25/12/2568</span>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="card-top">
-            <p>ความก้าวหน้าของโครงงาน</p>
-            <i class="fa-solid fa-clock clock-icon"></i>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" style="width: 100%;background-color: #33ff70f1;"></div>
-          </div>
-          <small>100%</small>
+        <!-- Grid of 4 -->
+        <div class="grid-box">
+            <div class="card">
+                <h3>รายงานความก้าวหน้า</h3>
+                <p>รายงานความก้าวหน้าครบทุกครั้งแล้ว</p>
+            </div>
+
+            <div class="card">
+                <h3>ความคิดเห็นจากที่ปรึกษา</h3>
+                <p>ตรวจเช็คอุปกรณ์ก่อนใช้งานจริงอีกครั้งนะครับ</p>
+            </div>
+
+            <div class="card">
+                <h3>ความคิดเห็นจากอาจารย์ประจำวิชา</h3>
+                <p>เอกสารบทที่ 4 เรียบร้อยมากค่ะ อย่าลืมแบ่งงานกันดีๆนะคะ✌️</p>
+            </div>
+
+            <div class="card">
+                <h3>ยื่นสอบจบ</h3>
+                <p>กรุณาแนบรูปเล่ม และ Presentaion (.pdf)</p>
+                <label class="form-label">อัพโหลดไฟล์</label>
+                <input type="file" class="form-control mb-3" />
+
+                <div style="display: flex; justify-content: center">
+                    <a href="#">
+                        <button class="btn" id="submitFinal">ยื่นสอบ</button>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="card">
-          <div class="card-top">
-            <p>อัปเดตโครงงานล่าสุด</p>
-            <i class="fa-solid fa-calendar-days cal-icon"></i>
-          </div>
-          <span class="date">25/12/2568</span>
-        </div>
-      </div>
-
-      <!-- Grid of 4 -->
-      <div class="grid-box">
-        <div class="card">
-          <h3>รายงานความก้าวหน้า</h3>
-          <p>กรุณารายงานความก้าวหน้าครั้งที่ 2</p>
-
-          <label class="form-label">อัพโหลดไฟล์</label>
-          <input type="file" class="form-control mb-3" />
-
-          <div style="display: flex; justify-content: center">
-            <a href="pre_project.html">
-              <button class="btn">ส่ง</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>ความคิดเห็นจากที่ปรึกษา</h3>
-          <p>เลือกใช้เซ็นเซอร์ตัวอื่นจะเหมาะสมกว่าครับ</p>
-        </div>
-
-        <div class="card">
-          <h3>ความคิดเห็นจากอาจารย์ประจำวิชา</h3>
-          <p>เอกสารบทที่ 1 เรียบร้อยมากค่ะ อย่าลืมแบ่งงานกันดีๆนะคะ✌️</p>
-        </div>
-
-        <div class="card">
-          <h3>ยื่นสอบจบ</h3>
-          <p class="status-text">ไม่สามารถยื่นสอบได้</p>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("submitFinal").addEventListener("click", function() {
+        Swal.fire({
+            icon: 'success',
+            title: 'การยื่นสอบจบสำเร็จ',
+            text: 'ระบบได้รับการยื่นสอบจบของท่านแล้ว กรุณารอติดตามประกาศวันและเวลาสอบจากทางคณะ',
+            confirmButtonText: 'ตกลง',
+            confirmButtonColor: '#3085d6'
+        }).then(() => {
+            // ตัวอย่าง redirect ถ้าต้องการหลังจากกดตกลง
+            window.location.href = "std_homepage_1000.html";
+        });
+    });
+</script>
+
 </html>

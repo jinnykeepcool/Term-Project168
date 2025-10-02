@@ -45,7 +45,7 @@
                     <p>สถานะโครงงาน</p>
                     <i class="fa-solid fa-check check-icon"></i>
                 </div>
-                <span class="status">รอยื่นสอบหัวข้อใหม่</span>
+                <span class="status">ผ่าน</span>
             </div>
 
             <div class="card">
@@ -54,9 +54,9 @@
                     <i class="fa-solid fa-clock clock-icon"></i>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar" style="width: 0%"></div>
+                    <div class="progress-bar" style="width: 100%;background-color: #0faa55f1;"></div>
                 </div>
-                <small>0%</small>
+                <small>100%</small>
             </div>
 
             <div class="card">
@@ -64,32 +64,39 @@
                     <p>อัปเดตโครงงานล่าสุด</p>
                     <i class="fa-solid fa-calendar-days cal-icon"></i>
                 </div>
-                <span class="date">30/9/2568</span>
+                <span class="date">28/12/2568</span>
             </div>
         </div>
 
         <!-- Grid of 4 -->
         <div class="grid-box">
             <div class="card">
-                <h3>เสนอโครงงาน</h3>
-                <p>เริ่มต้นโครงงานด้วยการเสนอโครงการใหม่ของคุณ</p>
-                <a href="pre_project.html"><button class="btn">เสนอหัวข้อโครงงาน</button></a>
+                <h3>รายงานความก้าวหน้า</h3>
+                <p>รายงานความก้าวหน้าครบทุกครั้งแล้ว</p>
             </div>
 
             <div class="card">
                 <h3>การสอบของคุณ</h3>
-                <p>6 ตุลาคม 2568 &nbsp;เวลา 13.00 น.</p>
+                <p>29 ธันวาคม 2568 &nbsp;เวลา 13.00 น.</p>
                 <p>ห้อง B4-02</p>
             </div>
 
             <div class="card">
-                <h3>ติดตามการผลสอบ</h3>
-                <p>คุณสอบหัวข้อไม่ผ่าน กรุณายื่นสอบหัวข้อใหม่อีกครั้ง</p>
+                <h3>ติดตามผลการสอบ</h3>
+                <p class="status-pass">ผ่าน</p>
             </div>
 
             <div class="card">
                 <h3>ยื่นสอบจบ</h3>
-                <p class="status-text">ไม่สามารถยื่นสอบได้</p>
+                <p>กรุณาแนบรูปเล่มที่เสร็จสมบูรณ์ (.pdf)</p>
+                <label class="form-label">อัพโหลดไฟล์</label>
+                <input type="file" class="form-control mb-3" />
+
+                <div style="display: flex; justify-content: center">
+                    <a href="#">
+                        <button class="btn" id="submitFinal">ส่ง</button>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
