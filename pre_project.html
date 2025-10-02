@@ -292,16 +292,23 @@
 
           <!-- Buttons -->
           <div class="d-flex justify-content-between mt-4">
-            <button type="submit" class="btn btn-dark px-4 rounded-pill">
-              ยืนยัน
-            </button>
             <a href="std_homepage.html" class="btn btn-danger px-4 rounded-pill"
               >กลับ</a
             >
+            <button
+              type="submit"
+              class="btn btn-dark px-4 rounded-pill"
+              id="submitBtn"
+            >
+              ยืนยัน
+            </button>
           </div>
         </form>
       </div>
     </main>
+
+    <!-- โหลด SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
       // ปุ่มเพิ่มสมาชิก
@@ -313,23 +320,28 @@
             container.getElementsByClassName("member-row").length;
 
           if (memberCount >= 4) {
-            alert("เพิ่มสมาชิกได้สูงสุด 4 คนเท่านั้น");
+            Swal.fire({
+              icon: "warning",
+              title: "ไม่สามารถเพิ่มสมาชิกได้",
+              text: "สามารถเพิ่มสมาชิกได้สูงสุด 4 คนเท่านั้น",
+              confirmButtonColor: "#252525",
+            });
             return;
           }
 
           const newRow = document.createElement("div");
           newRow.classList.add("row", "g-2", "member-row", "mt-2");
           newRow.innerHTML = `
-        <div class="col-md-4">
-          <input type="text" class="form-control rounded-pill" placeholder="ชื่อ" />
-        </div>
-        <div class="col-md-4">
-          <input type="text" class="form-control rounded-pill" placeholder="นามสกุล" />
-        </div>
-        <div class="col-md-4">
-          <input type="text" class="form-control rounded-pill" placeholder="รหัสนักศึกษา" />
-        </div>
-      `;
+      <div class="col-md-4">
+        <input type="text" class="form-control rounded-pill" placeholder="ชื่อ" />
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control rounded-pill" placeholder="นามสกุล" />
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control rounded-pill" placeholder="รหัสนักศึกษา" />
+      </div>
+    `;
           container.appendChild(newRow);
         });
 
@@ -338,14 +350,14 @@
         .getElementById("addObjective")
         .addEventListener("click", function () {
           const container = document.getElementById("objective-container");
-
           const newRow = document.createElement("div");
           newRow.classList.add("mb-2", "objective-row");
           newRow.innerHTML = `
-        <input type="text" class="form-control rounded-pill" placeholder="วัตถุประสงค์" />
-      `;
+      <input type="text" class="form-control rounded-pill" placeholder="วัตถุประสงค์" />
+    `;
           container.appendChild(newRow);
         });
+
       // เพิ่มขอบเขต
       document
         .getElementById("addScope")
@@ -370,6 +382,25 @@
       <input type="text" class="form-control rounded-pill" placeholder="ประโยชน์" />
     `;
           container.appendChild(newRow);
+        });
+
+      // เมื่อกด submit
+      document
+        .getElementById("projectForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // กันไม่ให้รีเฟรช
+
+          Swal.fire({
+            icon: "success",
+            title: "ยื่นสอบหัวข้อสำเร็จ",
+            html: "ระบบได้รับคำร้องขอยื่นสอบหัวข้อของท่านเรียบร้อยแล้ว<br>กรุณารอติดตามการแจ้งวัน เวลา และสถานที่สอบ ซึ่งจะแจ้งให้ทราบอีกครั้งผ่านระบบ",
+            confirmButtonText: "ตกลง",
+            confirmButtonColor: "#252525",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "std_homepage_1.html";
+            }
+          });
         });
     </script>
   </body>
