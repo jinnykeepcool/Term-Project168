@@ -153,7 +153,13 @@ body {
   font-size: 14px;
   margin: 4px 0;
 }
-
+.number{
+    color: #555555;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 4px 0;
+  text-align: center;
+}
 .card-top {
   display: flex;
   justify-content: space-between;
@@ -331,6 +337,7 @@ body {
   margin-top: 10px;
   /* align-self: flex-start; */
 }
+
 
 .project .action-btn:hover {
   background: #252525; /* เวลาชี้เปลี่ยนสีพื้น */
