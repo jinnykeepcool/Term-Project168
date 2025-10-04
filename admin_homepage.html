@@ -1,154 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style/admin_homepage.css" />
-    <script
-      src="https://kit.fontawesome.com/a2be86925b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <script src="https://kit.fontawesome.com/a2be86925b.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
+<body>
     <!-- Header -->
     <header class="header">
-      <h1>ระบบจัดการโครงงาน</h1>
-      <h2>กรรมการ</h2>
+        <h1>ระบบจัดการโครงงาน</h1>
+        <h2>กรรมการ</h2>
     </header>
 
     <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-role">
-        <div class="nav-tab active">
-          <i class="fa-solid fa-house"></i>
-          <a href="std_homepage.html"><span>หน้าแรก</span></a>
+        <div class="nav-role">
+            <div class="nav-tab active">
+                <i class="fa-solid fa-house"></i>
+                <a href="admin_homepage.html"><span>หน้าแรก</span></a>
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-user"></i>
+                <a href="user.html"><span>ข้อมูลผู้ใช้</span></a>
+            </div>
+            <div class="nav-tab logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="index.html"><span>ออกจากระบบ</span></a>
+            </div>
         </div>
-        <div class="nav-tab">
-          <i class="fa-solid fa-user"></i>
-          <a href="user.html"><span>ข้อมูลผู้ใช้</span></a>
-        </div>
-        <div class="nav-tab logout">
-          <i class="fa-solid fa-right-from-bracket"></i>
-          <a href="index.html"><span>ออกจากระบบ</span></a>
-        </div>
-      </div>
     </nav>
 
     <!-- Content -->
     <main class="content">
-      <!-- Top row -->
-      <div class="top-row">
-        <div class="card">
-          <div class="card-top">
-            <p>โครงงานที่รอสอบหัวข้อ</p>
-            <i class="fa-solid fa-check check-icon"></i>
-          </div>
-          <span class="number">15</span>
+        <!-- Top row -->
+        <div class="top-row">
+            <div class="card">
+                <div class="card-top">
+                    <p>โครงงานที่รอสอบหัวข้อ</p>
+                    <i class="fa-solid fa-check check-icon"></i>
+                </div>
+                <span class="number">15</span>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <p>โครงงานที่รอสอบจบ</p>
+                    <i class="fa-solid fa-clock clock-icon"></i>
+                </div>
+                <span class="number">3</span>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <p>โครงงานที่รอผลสอบ</p>
+                    <i class="fa-solid fa-calendar-days cal-icon"></i>
+                </div>
+                <span class="number">9</span>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="card-top">
-            <p>โครงงานที่รอสอบจบ</p>
-            <i class="fa-solid fa-clock clock-icon"></i>
-          </div>
-          <span class="number">3</span>
+        <div class="grid-box">
+            <div class="card">
+                <h3>การสอบหัวข้อ</h3>
+                <p>
+                    ชื่อโครงงาน : ระบบเช่ารถ<br />ชื่อโครงงาน : เว็บไซต์เพื่อการเรียนรู้ของนักศึกษาภาควิชา IT <br />ชื่อโครงงาน : เว็บไซต์ลงทะเบียนกิจกรรม
+                </p>
+
+                <div style="display: flex; justify-content: center">
+                    <a href="pre_project_manage.html">
+                        <button class="btn">จัดวันสอบ</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>การสอบจบ</h3>
+                <p>
+                    ชื่อโครงงาน : ระบบเช่ารถ<br />ชื่อโครงงาน : เว็บไซต์เพื่อการเรียนรู้ของนักศึกษาภาควิชา IT <br />ชื่อโครงงาน : เว็บไซต์ลงทะเบียนกิจกรรม
+                </p>
+
+                <div style="display: flex; justify-content: center">
+                    <a href="#">
+                        <button class="btn" id="submitFinal">จัดวันสอบ</button>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-          <div class="card-top">
-            <p>โครงงานที่รอผลสอบ</p>
-            <i class="fa-solid fa-calendar-days cal-icon"></i>
-          </div>
-          <span class="number">9</span>
-        </div>
-      </div>
+        <div class="top-row" style="margin-top: 20px;">
+            <div class="card">
+                <div class="card-top">
+                    <p>เอกสารที่รอลงนาม</p>
+                    <i class="fa-solid fa-chart-simple clock-icon"></i>
+                </div>
 
-      <!-- Grid of 4 -->
-      <div class="grid-box">
-        <div class="card">
-          <h3>การสอบหัวข้อ</h3>
-          <p>
-            ชื่อโครงงาน : ระบบเช่ารถ<br />ชื่อโครงงาน :
-            เว็บไซต์เพื่อการเรียนรู้ของนักศึกษาภาควิชา IT <br />ชื่อโครงงาน :
-            เว็บไซต์ลงทะเบียนกิจกรรม
-          </p>
+                <div class="card" id="project">
+                    <div class="project">
+                        <div class="project-head">
+                            <p style="font-size: 16px; font-weight: 500">
+                                เครื่องคัดแยกขยะอัจฉริยะ
+                            </p>
+                            <p class="txt" style="color: #9f9f9f">
+                                6806022510297 นางสาว ฐิติรัตน์ แดงประเสริฐ
+                            </p>
+                        </div>
+                        <div class="project-action">
+                            <button class="action-btn">ดาวน์โหลด</button>
+                            <button class="action-btn">ลงนาม</button>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <span class="progress-text">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <div style="display: flex; justify-content: center">
-            <a href="#">
-              <button class="btn" id="submitFinal">จัดวันสอบ</button>
-            </a>
-          </div>
-        </div>
+                <div class="card" id="project">
+                    <div class="project">
+                        <div class="project-head">
+                            <p style="font-size: 16px; font-weight: 500">
+                                ระบบจัดการคลังสินค้า
+                            </p>
+                            <p class="txt" style="color: #9f9f9f">
+                                6806022510238 นาย ธีรภัทร มังเทศ &nbsp; 6806022510289 นาย ลัทธพล ศิริหล้า
+                            </p>
+                        </div>
+                        <div class="project-action">
+                            <button class="action-btn">ดาวน์โหลด</button>
+                            <button class="action-btn">ลงนาม</button>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <span class="progress-text">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="card">
-          <h3>การสอบจบ</h3>
-          <p>
-            ชื่อโครงงาน : ระบบเช่ารถ<br />ชื่อโครงงาน :
-            เว็บไซต์เพื่อการเรียนรู้ของนักศึกษาภาควิชา IT <br />ชื่อโครงงาน :
-            เว็บไซต์ลงทะเบียนกิจกรรม
-          </p>
-          
-          <div style="display: flex; justify-content: center">
-            <a href="#">
-              <button class="btn" id="submitFinal">จัดวันสอบ</button>
-            </a>
-          </div>
-        </div>
+                <div class="card">
+                    <div class="project">
+                        <div class="project-head">
+                            <p style="font-size: 16px; font-weight: 500">
+                                เครื่องระงับความเครียด
+                            </p>
+                            <p class="txt" style="color: #9f9f9f">
+                                6806022510203 นายกฤษนัย โถมสันเทียะ
+                            </p>
+                        </div>
+                        <div class="project-action">
+                            <button class="action-btn">ดาวน์โหลด</button>
+                            <button class="action-btn">ลงนาม</button>
+                        </div>
+                    </div>
 
-        <div class="card">
-          <h3>รอผลการสอบ</h3>
-          <p>
-            ชื่อโครงงาน : ระบบเช่ารถ<br />ชื่อโครงงาน :
-            เว็บไซต์เพื่อการเรียนรู้ของนักศึกษาภาควิชา IT <br />ชื่อโครงงาน :
-            เว็บไซต์ลงทะเบียนกิจกรรม
-          </p>
-          
-          <div style="display: flex; justify-content: center">
-            <a href="#">
-              <button class="btn" id="submitFinal">ระบุผลสอบ</button>
-            </a>
-          </div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <span class="progress-text">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="card">
-          <h3>เอกสารที่รอลงนาม</h3>
-          <p>ระบบจัดการโครงงาน.pdf <br>ระบบติดตามสุขภาพระยะไกลสำหรับผู้ป่วยโควิด.pdf <br>เครื่องตรวจจับความเครียดของกล้ามเนื้อ.pdf</p>
-          
-          <div style="display: flex; justify-content: center">
-            <a href="#">
-              <button class="btn" id="submitFinal">จัดการ</button>
-            </a>
-          </div>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    document
-      .getElementById("submitFinal")
-      .addEventListener("click", function () {
-        Swal.fire({
-          icon: "success",
-          title: "การยื่นสอบจบสำเร็จ",
-          text: "ระบบได้รับการยื่นสอบจบของท่านแล้ว กรุณารอติดตามประกาศวันและเวลาสอบจากทางคณะ",
-          confirmButtonText: "ตกลง",
-          confirmButtonColor: "#3085d6",
-        }).then(() => {
-          // ตัวอย่าง redirect ถ้าต้องการหลังจากกดตกลง
-          window.location.href = "std_homepage_1000.html";
-        });
-      });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
