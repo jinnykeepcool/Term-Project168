@@ -505,6 +505,24 @@
             modal.hide();
         });
     });
+
+    // เมื่อกดบันทึกข้อมูลในฟอร์มของการเลือกวันสอบ
+    document.getElementById("examScheduleForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // ป้องกันไม่ให้ฟอร์มรีเฟรชหน้าเพจ
+
+        // แสดง Sweet Alert
+        Swal.fire({
+            title: "สำเร็จ!",
+            text: "บันทึกข้อมูลวันสอบเรียบร้อยแล้ว",
+            icon: "success",
+            confirmButtonText: "ตกลง",
+            confirmButtonColor: "#212529"
+        }).then(() => {
+            // ปิด modal หลังจากแสดง Sweet Alert
+            const modal = bootstrap.Modal.getInstance(document.getElementById("examScheduleModal"));
+            modal.hide();
+        });
+    });
 </script>
 
 
